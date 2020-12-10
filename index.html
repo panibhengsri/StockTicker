@@ -1,13 +1,55 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Stock Ticker Mapping App</title>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous" ></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+    <script language="javascript">
+        function checkT(){
+	        console.log("ticker checked");
+	        ticker.checked = true;
+	        c_name.checked = false;
+	        checkType();
+        }
+
+        function checkC(){
+	        console.log("compnay name checked");
+	        ticker.checked = false;
+	        c_name.checked = true;
+	        checkType();
+        }  
+
+        function checkType(){
+            if (ticker.checked){
+		        $("#ticker").html('Ticker: <input type="text" name="ticker" />');
+		        $("#c_name").html("&nbsp;");
+	        }else{
+		        $("#ticker").append("&nbsp;");
+		        $("#c_name").append('Company Name: <input type="text"  name="c_name" />');
+		        console.log("in check type function");
+	        }
+        }
+
+        $('input[value="ticker"]').attr('onclick','checkT()');
+	    $('input[value="c_name"]').attr('onclick','checkC()');
+        
+    </script>
+
     <h1 style= "text-align:center;">Stock Ticker Mapping App</h1>
     
-    Please indicate if you are providing a ticker OR a compnay name to search:
+    <h3>Please indicate if you are providing a ticker OR a company name to search:</h3>
     <form>
         <input type = "radio" id="ticker" name="t_or_cn" value="ticker">
         <label for="ticker">Ticker</label><br>
         <input type = "radio" id="c_name" name="t_or_cn" value="c_name">
         <label for="c_name">Company Name</label><br>
     </form>
+
+    
 
 
 
