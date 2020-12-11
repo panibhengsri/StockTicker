@@ -13,25 +13,25 @@
 <body>
     <script language="javascript">
 
-        var ticker = $('input[value="ticker"]');
-        var c_name = $('input[value="c_name"]');
+        var t = $('input[value="ticker"]');
+        var c = $('input[value="c_name"]');
 
         function checkT(){
 	        console.log("ticker checked");
-	        ticker.checked = true;
-	        c_name.checked = false;
+	        t.checked = true;
+	        c.checked = false;
 	        checkType();
         }
 
         function checkC(){
 	        console.log("compnay name checked");
-	        ticker.checked = false;
-	        c_name.checked = true;
+	        t.checked = false;
+	        c.checked = true;
 	        checkType();
         }  
 
         function checkType(){
-            if (ticker.checked){
+            if (t.checked){
                 $("#ticker").append('Ticker: <input type="text"  name="ticker" />');
 		        $("#c_name").html("&nbsp;");
 	        }else{
