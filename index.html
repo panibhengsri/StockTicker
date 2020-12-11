@@ -32,11 +32,11 @@
 
         function checkType(){
             if (t.checked){
-                $("#ticker").append('Ticker: <input type="text"  name="ticker" />');
+                $("#ticker").html('Ticker: <input type="text"  name="ticker" />');
 		        $("#c_name").html("&nbsp;");
 	        }else{
                 $("#ticker").html("&nbsp;");
-		        $("#c_name").append('Company Name: <input type="text"  name="c_name" />');
+		        $("#c_name").html('Company Name: <input type="text"  name="c_name" />');
 		        console.log("in check type function");
 	        }
         }
