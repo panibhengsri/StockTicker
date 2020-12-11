@@ -24,7 +24,7 @@
         }
 
         function checkC(){
-	        console.log("compnay name checked");
+	        console.log("company name checked");
 	        t.checked = false;
 	        c.checked = true;
 	        checkType();
@@ -53,14 +53,15 @@
     <h1 style= "text-align:center;">Stock Ticker Mapping App</h1>
     
     <h3>Please indicate if you are providing a ticker OR a company name to search:</h3>
+    
     <form>
         <p>
             <input type="radio"  name="t_or_cn" value = "ticker" />Ticker  
             <input type="radio"  name='t_or_cn' value = 'c_name'/> Company Name
         </p>
 
-        <p>Ticker: <input type="text"  name='ticker' /></p>
-        <p>Company Name: <input type="text"  name='c_name' /></p>
+        <p>Ticker: <input type="text"  name='ticker' id='ticker' /></p>
+        <p>Company Name: <input type="text"  name='c_name' id='c_name' /></p>
 
         <input type = "submit" value = "Search" />
     </form>
