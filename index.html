@@ -32,7 +32,7 @@
 
         function checkType(){
             if (t.checked){
-                $("#ticker").append('Ticker: <input type="text"  name="ticker" />');
+                $("#ticker").append('Ticker: <input type="text" name="ticker" />');
 		        // $("#c_name").html("&nbsp;");
 	        }else{
                 // $("#ticker").html("&nbsp;");
@@ -44,7 +44,7 @@
         $(function() {
             $('input[value="ticker"]').attr('onclick','checkT()');
 	        $('input[value="c_name"]').attr('onclick','checkC()');
-            $('p:contains(Ticker)').attr("id","ticker");
+            $('p:contains(Ticker)').attr('id','ticker');
 	        $('p:contains(Company Name)').attr('id','c_name');
         }); 
 
