@@ -14,9 +14,9 @@ MongoClient.connect(url, function(err, db) {
         }
         else
         {
-            console.log("Items: ");
+            console.log("Companies: ");
             for (i=0; i<items.length; i++)
-            console.log(i + ": " + items[i].title + " by: " + items[i].author);
+            console.log(i + ": " + items[i].company_name + " by: " + items[i].ticker);
         }
         
         db.close();
