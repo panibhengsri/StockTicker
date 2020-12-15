@@ -33,17 +33,15 @@
         function checkType(){
             if (t.checked){
                 $("#ticker").append('Ticker: <input type="text" name="ticker" />');
-		        // $("#c_name").html("&nbsp;");
 	        }else{
-                // $("#ticker").html("&nbsp;");
-		        $("#c_name").append('Company Name: <input type="text"  name="c_name" />');
+		        $("#c_name").append('Company Name: <input type="text" name="c_name" />');
 	        }
             console.log("in check type function");
         }
 
         $(function() {
-            $('input[value="ticker"]').attr('onclick','checkT()');
-	        $('input[value="c_name"]').attr('onclick','checkC()');
+            //$('input[value="ticker"]').attr('onclick','checkT()');
+	        //$('input[value="c_name"]').attr('onclick','checkC()');
             $('p:contains(Ticker)').attr('id','ticker');
 	        $('p:contains(Company Name)').attr('id','c_name');
         }); 
