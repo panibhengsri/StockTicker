@@ -34,6 +34,22 @@
 	        checkType();
         }  
 
+        window.onload = function() {
+            var radio_t = document.getElementByID('ticker');
+            var radio_c = document.getElementByID('c_name');
+
+            radio_t.onclick = do_t;
+            radio_c.onclick = do_c;
+        }
+
+        function do_t() {
+            alert('ticker is checked')
+        }
+
+        function do_c() {
+            alert('company name is checked')
+        }
+
         function checkType(){
             if (t.checked){
                 //$("#tick").append('Ticker: <input type="text" name="ticker" />');
@@ -66,9 +82,11 @@
     
     <form>
         <p>
-            <input type="radio"  name="t_or_cn" value = 'ticker' />Ticker  
-            <input type="radio"  name='t_or_cn' value = 'c_name' /> Company Name
+            <input type="radio"  name="t_or_cn" id = 'ticker' onclick=""/>Ticker  
+            <input type="radio"  name='t_or_cn' id = 'c_name' onclick=""/> Company Name
         </p>
+
+        
 
         <!--
             <p>Ticker: <input type="text"  name='ticker' /></p>
