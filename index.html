@@ -24,54 +24,17 @@
 	        console.log("ticker checked");
 	        t.checked = true;
 	        c.checked = false;
-	        checkType();
         }
 
         function checkC(){
 	        console.log("company name checked");
 	        t.checked = false;
 	        c.checked = true;
-	        checkType();
         }  
-
-        window.onload = function() {
-            var radio_t = document.getElementByID('ticker');
-            var radio_c = document.getElementByID('c_name');
-
-            radio_t.onclick = do_t;
-            radio_c.onclick = do_c;
-        }
-
-        function do_t() {
-            alert('ticker is checked')
-        }
-
-        function do_c() {
-            alert('company name is checked')
-        }
-
-        function checkType(){
-            if (t.checked){
-                //$("#tick").append('Ticker: <input type="text" name="ticker" />');
-                <form>
-                    <p>Ticker: <input type="text"  name='ticker' /></p>
-                </form>
-                //$("#c_nam").html("&nbsp;");
-	        }else{
-                //$("#c_nam").append('Company Name: <input type="text" name="c_name" />');
-                <form>
-                    <p>Company Name: <input type="text"  name='c_name' /></p> 
-                </form>
-                //$("#tick").html("&nbsp;");
-	        }
-            console.log("in check type function");
-        }
 
         $(function() {
             $('input[value="ticker"]').attr('onclick','checkT()');
 	        $('input[value="c_name"]').attr('onclick','checkC()');
-            $('p:contains(Ticker)').attr('id','tick');
-	        $('p:contains(Company Name)').attr('id','c_nam');
         }); 
 
     </script>
@@ -86,13 +49,7 @@
             <input type="radio"  name='t_or_cn' id = 'c_name' onclick=""/> Company Name
         </p>
 
-        
-
-        <!--
-            <p>Ticker: <input type="text"  name='ticker' /></p>
-        <p>Company Name: <input type="text"  name='c_name' /></p> 
-        -->
-        
+        <p>Ticker OR Company Name: <input type="text"  name='input' /></p>
 
         <input type = "submit" value = "Search" />
     </form>
