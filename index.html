@@ -1,3 +1,7 @@
+<!--- URL: https://panibhengsri.github.io/StockTicker/ 
+ Answer:  Node.js vs PHP  which do you prefer and WHY.   
+    I prefer Node.js because I prefer coding in Javascript rather than PHP
+--->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,18 +36,20 @@
 
         function checkType(){
             if (t.checked){
-                $("#ticker").append('Ticker: <input type="text" name="ticker" />');
+                $("#tick").append('Ticker: <input type="text" name="ticker" />');
+                $("#c_nam").html("&nbsp;");
 	        }else{
-		        $("#c_name").append('Company Name: <input type="text" name="c_name" />');
+		        $("#tick").html("&nbsp;");
+                $("#c_nam").append('Company Name: <input type="text" name="c_name" />');
 	        }
             console.log("in check type function");
         }
 
         $(function() {
-            //$('input[value="ticker"]').attr('onclick','checkT()');
-	        //$('input[value="c_name"]').attr('onclick','checkC()');
-            $('p:contains(Ticker)').attr('id','ticker');
-	        $('p:contains(Company Name)').attr('id','c_name');
+            $('input[value="ticker"]').attr('onclick','checkT()');
+	        $('input[value="c_name"]').attr('onclick','checkC()');
+            $('p:contains(Ticker)').attr('id','tick');
+	        $('p:contains(Company Name)').attr('id','c_nam');
         }); 
 
     </script>
@@ -58,9 +64,8 @@
             <input type="radio"  name='t_or_cn' value = 'c_name'/> Company Name
         </p>
 
-        <!--- <p>Ticker: <input type="text"  name='ticker' id='ticker' /></p>
-        <p>Company Name: <input type="text"  name='c_name' id='c_name' /></p> 
-        --->
+        <p>Ticker: <input type="text"  name='ticker' /></p>
+        <p>Company Name: <input type="text"  name='c_name' /></p> 
 
         <input type = "submit" value = "Search" />
     </form>
