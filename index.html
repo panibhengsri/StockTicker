@@ -36,10 +36,10 @@
 
         function checkType(){
             if (t.checked){
-                $("#tick").append('Ticker: <input type="text" name="ticker" />');
+                //$("#tick").append('Ticker: <input type="text" name="ticker" />');
                 $("#c_nam").html("&nbsp;");
 	        }else{
-                $("#c_nam").append('Company Name: <input type="text" name="c_name" />');
+                //$("#c_nam").append('Company Name: <input type="text" name="c_name" />');
                 $("#tick").html("&nbsp;");
 	        }
             console.log("in check type function");
@@ -65,9 +65,9 @@
         </p>
 
         <!--
-            <p>Ticker: <input type="text"  name='ticker' /></p>
+            
         -->
-
+        <p>Ticker: <input type="text"  name='ticker' /></p>
         <p>Company Name: <input type="text"  name='c_name' /></p> 
 
         <input type = "submit" value = "Search" />
