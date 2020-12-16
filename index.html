@@ -39,8 +39,8 @@
                 $("#tick").append('Ticker: <input type="text" name="ticker" />');
                 $("#c_nam").html("&nbsp;");
 	        }else{
-		        $("#tick").html("&nbsp;");
                 $("#c_nam").append('Company Name: <input type="text" name="c_name" />');
+                $("#tick").html("&nbsp;");
 	        }
             console.log("in check type function");
         }
@@ -64,8 +64,10 @@
             <input type="radio"  name='t_or_cn' value = 'c_name'/> Company Name
         </p>
 
-        <p>Ticker: <input type="text"  name='ticker' /></p>
+        <!--
+            <p>Ticker: <input type="text"  name='ticker' /></p>
         <p>Company Name: <input type="text"  name='c_name' /></p> 
+        -->
 
         <input type = "submit" value = "Search" />
     </form>
